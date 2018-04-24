@@ -33,10 +33,6 @@ app.use((req,res,next) => {
   next();
 });
 
-// app.use((req, res, next) => {
-//   res.render('maintenance.hbs');
-// })
-
 
 // serve static pages from the public folder. __dirname is the root folder of the project
 // anything you paste inside /public folder will be statically serverd and available over the server
