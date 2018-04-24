@@ -61,7 +61,7 @@ app.get('/about', (req, res) => {
   // instead to send static html code back we render it with the view engine previously set
   //res.send('About page');
   res.render('about.hbs', { // pass in some arguments via jSON object
-    pageTitle: 'About Page (HBS)',
+    pageTitle: 'About Page (HBS)'
   }); // views is the default folder
 })
 
@@ -69,6 +69,12 @@ app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Error: Unable to process the request!'
   })
+})
+
+app.get('/projects', (req,res) => {
+  res.render('projects.hbs', {
+    pageTitle : 'Projects page with portfolios'
+  });
 })
 
 app.listen(port, () => {
